@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./images/geometry.png" type="image/x-icon">
+
+
+
+</head>
+
+<body>
+
+    <!----------- Header Section  ----------->
+    <header>
+        <div class="max-w-full flex bg-cyan-100 mt-5 mx-3 justify-between p-5 rounded-xl shadow-xl mb-4">
+            <div>
+                <h1 class="text-3xl font-bold block">Interactive</h1>
+                <h2 class="text-xl font-semibold text-gray-600">Geometry Genius</h2>
+            </div>
+            <button id="blog-btn" class="btn btn-info text-xl align-middle my-auto">Blog</button>
+
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="flex flex-col lg:flex-row mx-2 gap-2">
+
+                <!-----------Geometry Field All card----------->
+                <div class="geometry-field grid md:grid-cols-2 lg:grid-cols-3 w-10/12 gap-5">
+                    <div class="card w-96 bg-base-100 shadow-xl card-container">
+                        <img src="./images/triangle.png" alt="" class="mx-auto pt-10 w-3/5 h-48" />
+                        <div class="card-body items-center text-center">
+                            <h2 id="triangle" class="card-title text-3xl font-bold">Triangle</h2>
+                            <p class="mt-2">Area (A) = 0.5 <span>&#215;</span> b 
+                                <span>&#215;</span> h</p>
+                            <div class="flex mt-2">
+                                <input id="triangle-base" class="rounded-xl w-2/5 h-8 pl-3 bg-slate-200" 
+                                type="text" placeholder="Base">
+                                <p class="mr-2">cm</p>
+                                <input id="triangle-height" 
+                                class="rounded-xl w-2/5 h-8 pl-3 bg-slate-200" 
+                                type="text" placeholder="Height">
+                                <p>cm</p>
+                            </div>
+                            <button id="btn-card-one"
+                            class="btn btn-info w-2/3 h-5 mt-2 rounded-full">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="card w-96 bg-base-100 shadow-xl card-container">
+                        <img src="./images/rectangle.png" alt="" class="mx-auto pt-10 w-3/5 h-48" />
+                        <div class="card-body items-center text-center">
+                            <h2 id="rectangle" class="card-title text-3xl font-bold">Rectangle</h2>
+                            <p class="mt-2">Area (A) = w <span>&#215;</span> l</p>
+                            <div class="flex mt-2">
+                                <input id="rectangle-weight" class="rounded-xl w-2/5 h-8 pl-3 bg-slate-200" 
+                                type="text" placeholder="Weight">
+                                <p class="mr-2">cm</p>
+                                <input id="rectangle-length" class="rounded-xl w-2/5 h-8 pl-3 bg-slate-200" 
+                                type="text" placeholder="Length">
+                                <p>cm</p>
+                            </div>
+                            <button id="btn-card-two" 
+                            class="btn btn-info w-2/3 h-5 mt-2 rounded-full">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="card w-96 bg-base-100 shadow-xl card-container">
+                        <img src="./images/parallelogram.png" alt="" class="mx-auto pt-10 w-3/5 h-48" />
+                        <div class="card-body items-center text-center">
+                            <h2 id="parallelogram" class="card-title text-3xl font-bold">Parallelogram</h2>
+                            <p class="mt-2">Area (A) = b <span>&#215;</span> h</p>
+                            <div class="flex mt-2 gap-5">
+                                <p class="text-xl font-bold">b = <span id="parallelogram-base">10</span>cm,</p>
+                                <p class="text-xl font-bold">h = <span id="parallelogram-height">12</span>cm</p>
+                            </div>
+                            <button  id="btn-card-three"
+                            class="btn btn-info w-2/3 h-5 mt-2 rounded-full">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="card w-96 bg-base-100 shadow-xl card-container">
+                        <img src="./images/rhombus.png" alt="" class="mx-auto pt-10 w-3/5 h-48" />
+                        <div class="card-body items-center text-center">
+                            <h2 id="rhombus" class="card-title text-3xl font-bold">Rhombus</h2>
+                            <p class="mt-2">Area (A) = 0.5 <span>&#215;</span> d1 
+                                <span>&#215;</span> d2</p>
+                            <div class="flex mt-2 gap-5">
+                                <p class="text-xl font-bold">d1 = <span id="rhombus-d1">16</span>cm,</p>
+                                <p class="text-xl font-bold">d2 = <span id="rhombus-d2">8</span>cm</p>
+                            </div>
+                            <button id="btn-card-four"
+                            class="btn btn-info w-2/3 h-5 mt-2 rounded-full">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="card w-96 bg-base-100 shadow-xl card-container">
+                        <img src="./images/pentagon.png" alt="" class="mx-auto pt-10 w-3/5 h-48" />
+                        <div class="card-body items-center text-center">
+                            <h2 id="pentagon" class="card-title text-3xl font-bold">Pentagon</h2>
+                            <p class="mt-2">Area (A) = 0.5 <span>&#215;</span> p 
+                                <span>&#215;</span> b</p>
+                            <div class="flex mt-2 gap-5">
+                                <p class="text-xl font-bold">p = <span id="pentagon-perimeter">6</span>cm,</p>
+                                <p class="text-xl font-bold">b = <span id="pentagon-base">10</span>cm</p>
+                            </div>
+                            <button id="btn-card-five"
+                            class="btn btn-info w-2/3 h-5 mt-2 rounded-full">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="card w-96 bg-base-100 shadow-xl card-container">
+                        <img src="./images/ellipse.png" alt="" class="mx-auto pt-10 w-3/5 h-48" />
+                        <div class="card-body items-center text-center">
+                            <h2 id="ellipse" class="card-title text-3xl font-bold">Ellipse</h2>
+                            <p class="mt-2">Area (A) = <span style="font-size: x-large;">π</span>ab</p>
+                            <div class="flex mt-2 gap-5">
+                                <p class="text-xl font-bold">a = <span id="ellipse-area">10</span>cm,</p>
+                                <p class="text-xl font-bold">b = <span id="ellipse-base">4</span>cm</p>
+                            </div>
+                            <button id="btn-card-six"
+                            class="btn btn-info w-2/3 h-5 mt-2 rounded-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+              <!----------- Area Calculation ----------->
+                <div class="area-calculator">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body w-96 text-center">
+                            <h1 
+                            class="text-3xl font-bold underline text-center mb-4">Area Calculation</h1>
+                            <div class="table-container max-w-fit">
+                                <table class="table" id="area-table">
+                                  <tbody id="area-calculator-collection">
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!--------- Footer Section ----------->
+    <footer>
+        <div class="bg-gray-600 mt-20 max-w-full rounded-md mx-3">
+            <h1 class="text-xl text-center text-white font-bold py-10 mx-auto"> 
+                Copyright &copy; 2023  
+                <a class="font-bold text-cyan-400" href="https://www.facebook.com/mdsamsulalamasif">Samsul Alam Asif. </a>
+                All Rights Reserved.®
+            </h1>
+        </div>
+    </footer>
+
+
+    <script src="JavaScripts/common-functions.js"></script>
+    <script src="JavaScripts/index-scripts.js"></script>
+    <script src="JavaScripts/tailwind.config.js"></script>
+</body>
+
+</html>
